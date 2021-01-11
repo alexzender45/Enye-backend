@@ -1,0 +1,53 @@
+{
+  "name": "t-grade",
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cover": "jest --coverage",
+    "lint": "eslint \"src/**/*.js\"",
+    "start": "node dist/index.js",
+    "build": "rimraf dist/  && babel src -s -d dist",
+    "dev": "yarn build && nodemon --exec babel-node src/index.js"
+  },
+  "author": {
+    "name": "Enye Backend"
+  },
+  "homepage": " ",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.6",
+    "query-string": "^6.13.8",
+    "url": "^0.11.0",
+    "validator": "^13.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}
